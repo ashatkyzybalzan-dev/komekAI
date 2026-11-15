@@ -2,16 +2,10 @@ services:
   - type: web
     name: komek-ai
     runtime: node
-    plan: starter
+    plan: free
     buildCommand: npm install
     startCommand: node server.js
-    disk:
-      name: komek-data
-      mountPath: /var/data
-      sizeGB: 1
     envVars:
-      - key: DATA_DIR
-        value: /var/data
       - key: ADMIN_USER
         value: admin
       - key: ADMIN_PASS
